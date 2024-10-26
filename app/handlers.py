@@ -17,6 +17,7 @@ async def send_welcome(message: Message):
 @router.message(CommandStart())
 async def cmd_start(message: Message):
     await rq.set_user(message.from_user.id)
+    await message.answer('Выберите категорию товара',reply_markup= kb.main)
     await send_welcome(message)
 
 
