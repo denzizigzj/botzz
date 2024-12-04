@@ -10,7 +10,7 @@ from app.database.models import async_main
 async def main():
     await async_main()
     load_dotenv()
-    bot = Bot('7888361113:AAHQWU7enrY_2ljI63-R2_kuGcw71kiqEIY')
+    bot = Bot('')
     dp = Dispatcher()
     dp.include_router(router)
     await dp.start_polling(bot)
