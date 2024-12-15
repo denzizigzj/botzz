@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "botzz"
+version = "0.1.0"
+description = ""
+authors = ["Amatefinde <gurov@tm-serv.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+aiogram = "^3.15.0"
+sqlalchemy = "^2.0.36"
+python-dotenv = "^1.0.1"
+emoji = "^2.14.0"
+aiosqlite = "^0.20.0"
+openai = "^1.57.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
