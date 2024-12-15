@@ -6,7 +6,7 @@ authors = ["Amatefinde <gurov@tm-serv.ru>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "3.11"
+python = "^3.11"
 aiogram = "^3.15.0"
 sqlalchemy = "^2.0.36"
 python-dotenv = "^1.0.1"
