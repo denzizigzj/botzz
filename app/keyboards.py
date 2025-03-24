@@ -6,15 +6,22 @@ from aiogram.utils.keyboard import InlineKeyboardBuilder
 
 from app.database.requests import get_categories, get_category_item
 
+import emoji
+
 main = ReplyKeyboardMarkup(
     keyboard=[
-        [KeyboardButton(text='Каталог')],
-        #[KeyboardButton(text='Корзина')],
-        [KeyboardButton(text='Контакты'), KeyboardButton(text='О нас')]
+        [KeyboardButton(text='Каталог' + emoji.emojize(":open_book:"))],
+        [KeyboardButton(text="Связаться с нами" + emoji.emojize(":telephone_receiver:"))],
+        [KeyboardButton(text='Контакты' + emoji.emojize(":globe_with_meridians:")), KeyboardButton(text='О нас' + emoji.emojize(":information:"))]
     ],
     resize_keyboard=True,
     input_field_placeholder='Выберите, чтобы продолжить'
 )
+
+async def contact_keyboard():
+    keyboard = InlineKeyboardBuilder()
+    keyboard.add(InlineKeyboardButton(text='На главную', callback_data='to_main'))
+    return keyboard.as_markup()
 
 async def categories():
     all_categories = await get_categories()
